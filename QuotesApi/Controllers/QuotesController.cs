@@ -20,7 +20,6 @@ namespace QuotesApi.Controllers
         {
             _quotesDbContext = quotesDbContext;
         }
-        // GET: api/Quotes
         [HttpGet]
         [ResponseCache(Duration = 60, Location = ResponseCacheLocation.Any)]
         [AllowAnonymous]
@@ -71,7 +70,6 @@ namespace QuotesApi.Controllers
         }
 
 
-        // GET: api/Quotes/5
         [HttpGet("{id}", Name = "Get")]
         public IActionResult Get(int id)
         {
@@ -84,7 +82,6 @@ namespace QuotesApi.Controllers
         }
 
 
-        // POST: api/Quotes
         [HttpPost]
         public IActionResult Post([FromBody] Quote quote)
         {
@@ -95,7 +92,6 @@ namespace QuotesApi.Controllers
             return StatusCode(StatusCodes.Status201Created);
         }
 
-        // PUT: api/Quotes/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Quote quote)
         {
@@ -124,7 +120,6 @@ namespace QuotesApi.Controllers
 
         }
 
-        // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
